@@ -10,7 +10,6 @@ function setup() {
   // socket = io.connect('localhost:3000');
   socket = io.connect('https://draw-your-thang.herokuapp.com/');
 
-  // these need a call back function
   socket.on('syncDrawing', newDrawing);
   socket.on('currentState', currentState);
   socket.on('usersOnline', usersOnline);
@@ -23,8 +22,11 @@ function setup() {
   g = random(100,255);
   b = random(100,255);
 
-  ////////////
-  slider = createSlider(1,8, 5);
+  var minSlider = 1;
+  var maxSlider = 6;
+  var initSlider= 3;
+
+  slider = createSlider(minSlider, maxSlider, initSlider);
   slider.parent('slider');
   sizecounter = select(".sizecounter");
   sizecounter.html(slider.value());
@@ -32,9 +34,8 @@ function setup() {
   canvas.class('canvas');
   canvas.parent('canvas-holder');
   background('white');
-  ////////////
 
-  strokeWeight(5); // pen size
+  strokeWeight(initSlider); 
 }
 
 // called when the mouse is dragged
