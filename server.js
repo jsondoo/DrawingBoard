@@ -19,10 +19,7 @@ var cs = [];
 var usersOnline = 0;
 
 function newConnection(socket) {
-    // console.log(socket.id);
     usersOnline++;
-
-    console.log(usersOnline)
 
     io.emit('usersOnline', usersOnline);
     io.emit('currentState', cs);
