@@ -1,7 +1,8 @@
 # DrawingBoard 
 
-Simple web app from UBCHacks 2017 Workshops.
-Credit goes to Matthew Siu.
+Realtime drawing board app from UBCHacks 2017 Workshops.
+
+Credits to Matthew Siu.
 
 I wanted to learn more about socket.io, so I made some additional changes:
 * Add 'Clear' button to clear the canvas for all users
@@ -10,3 +11,5 @@ I wanted to learn more about socket.io, so I made some additional changes:
 
 Future changes:
 * Nicknames
+
+Deployed onto heroku here: https://draw-your-thang.herokuapp.com/
