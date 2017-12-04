@@ -7,7 +7,7 @@ var sizecounter;
 
 // runs once at the beginning
 function setup() {
-  socket = io.connect('localhost:3000');
+  socket = io.connect('https://draw-your-thang.herokuapp.com/');
 
   // these need a call back function
   socket.on('syncDrawing', newDrawing);
