@@ -84,3 +84,10 @@ function clearCanvas(){
   clear();
   socket.emit('clear canvas');
 }
+
+function changeColour(hex){
+  hex = hex.replace('#','');
+  r = parseInt(hex.substring(0, hex.length/3), 16);
+  g = parseInt(hex.substring(hex.length/3, 2*hex.length/3), 16);
+  b = parseInt(hex.substring(2*hex.length/3, 3*hex.length/3), 16);
+}
