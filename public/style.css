@@ -13,15 +13,57 @@ body {
 }
 
 #canvas-holder {
-	margin: 20px auto;
+	margin: 5px auto;
 }
 
 canvas {
 	border-style: solid;
-	border-radius: 8px;
+	border-radius: 2px;
+	margin-top: 5px;
 }
 
 #slider {
 	position: relative;
 	top: 2px;
+}
+
+
+#red {
+	background-color: #FF0000;
+	padding: 5px 5px;
+}
+
+#orange {
+	background-color: #FF7F00;
+	padding: 5px 5px;
+}
+
+#yellow {
+	background-color: #FFFF00;
+	padding: 5px 5px;
+}
+
+#green {
+	background-color: #00FF00;
+	padding: 5px 5px;
+}
+
+#blue {
+	background-color: #0000FF;
+	padding: 5px 5px;
+}
+
+#purple{
+	background-color: #9400D3;
+	padding: 5px 5px;
+}
+
+#black{
+	background-color: #000000;
+	padding: 5px 5px;
+}
+
+#white{
+	background-color: #FFFFFF;
+	padding: 5px 5px;
 }
