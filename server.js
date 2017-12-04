@@ -7,7 +7,7 @@
 
 var express = require('express')
 var app = express();
-var server = app.listen(3000);
+var server = app.listen(process.env.PORT || 3000);
 
 // tell the app to use the public folder files
 app.use(express.static('public'));
