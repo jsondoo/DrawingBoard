@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Draw your thang</title>
+  <script src="libraries/p5.js" type="text/javascript"></script>
+
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="libraries/p5.sound.js" type="text/javascript"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="sketch.js" type="text/javascript"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+  <div>
+    <span>Users Online: </span>
+    <span id="num_users">0</span>
+  </div>
+  <div id="wrapper">
+    <div id="canvas-holder">
+    </div>  
+    <div id="controls">
+      <span>Pen size <span id="slider"></span>  <span class="sizecounter"></span></span>
+      <span id="download" onclick="saveCanvas()">DOWNLOAD IMAGE</span>
+      <button onclick="clearCanvas()">Clear</button>
+    </div>
+  </div>
+  <script>
+  function saveCanvas() {
+    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    window.location.href = image;
+  }
+  </script>
+</body>
+</html>
